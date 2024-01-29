@@ -267,6 +267,11 @@ footer{
 }
 
 @media screen and (max-width: 426px) {
+
+    .nav-bar{
+        padding: 2rem;
+    }
+
     #footer{
         grid-template-columns: repeat(1, 1fr);
         padding: 3rem 2rem;
