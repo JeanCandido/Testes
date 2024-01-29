@@ -231,6 +231,7 @@ footer{
         display: flex;
         flex-direction: column;
         text-align: center;
+        gap: 2rem;
         padding: 10px 0;
     }
 
