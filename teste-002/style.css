@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: grey;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+}
+
+header ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header li {
+    display: inline-block; /* Exibir os itens em linha */
+    margin-right: 10px;    /* Adicionar espaço entre os itens (opcional) */
+}
+
+/* Estilizar links */
+header li a {
+    text-decoration: none;  /* Remover sublinhado padrão dos links */
+    padding: 8px 12px;      /* Adicionar preenchimento aos links (ajuste conforme necessário) */
+    border: 1px solid #ccc; /* Adicionar uma borda aos links (opcional) */
+    border-radius: 4px;     /* Adicionar bordas arredondadas (opcional) */
+    background-color: #f2f2f2; /* Adicionar cor de fundo aos links (opcional) */
+    color: #333;            /* Cor do texto dos links */
+}
+
+main{
+    background-color: white;
+    color: black;
+}
+
+div.main{
+    max-width: 800px;
+    margin: auto;
+
+}
+
+main h1{
+    padding: 10px 10px 0px 10px;
+    color: darkblue;
+    text-align: center;
+}
+
+main h2{
+    padding: 0px 10px 0px 10px;
+    color: darkgreen;
+    text-align: center;
+}
+
+main p{
+    padding: 10px;
+    text-indent: 10px;
+    text-justify: auto;
+    line-height: 25px;
+}
+
+div.div{
+    height: 400px;
+    width: 100%;
+}
+
+footer{
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}

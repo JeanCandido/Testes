@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+
+:root{
+    --cor01: #0c0c0c;
+    --cor02: #171717;
+    --cor03: #a8a29e;
+    --cor04: #f5f5f5;
+
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: 1px;
+    letter-spacing: 1px;
+}
+
+header{
+    background-color: #24252a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    color: white;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: white;
+    font-weight: 400;
+    margin: 0px 15px;
+}
+
+.login-button button{
+    border: none;
+    background-color: #0187a7;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.login-button button a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.15rem;
+}
+
+.mobile-menu-icon{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+main{
+    height: 80vh;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--cor01);
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer-contents{
+    color: #fff;
+}
+
+#footer-contents h1{
+    padding: 0.75rem;
+}
+
+#footer-social-media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+
+}
+
+#footer-social-media .footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+#footer-social-media .footer-link:hover{
+    opacity: 0.8;
+}
+
+#footer-social-media .footer-link i{
+    font-size: 1.25em;
+}
+
+#footer-social-media a#whatsapp{
+    background-color: green;
+
+}
+
+#footer-social-media a#instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#footer-social-media a#facebook{
+    background-color: blue;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--cor04);
+    list-style: none;
+}
+
+.footer-list a{
+    color: var(--cor03);
+    text-decoration: none;
+}
+
+.footer-list a:hover{
+    color: #7f37c9;
+    transition: all 0.4s;
+}
+
+#footer-subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--cor04);
+}
+
+#form{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 4px;
+}
+
+#form input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#form button{
+    background-color: #7f37c9;
+    border: none;
+    color: var(--cor04);
+    font-size: 1.25rem;
+    border-radius: 0px 4px 4px 0px;
+    height: 100%;
+    padding: 0 1.25rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-list, .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-menu-icon button {
+        all: unset;
+        color: white;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 90%;
+        background-color: #24252a;
+        padding: 5%;
+    }
+
+    .mobile-menu.open {
+        display: block;
+    }
+
+    .mobile-menu-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-menu-list .nav-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .mobile-menu-list .nav-item button {
+        background-color: #0187a7;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    .mobile-menu-list .nav-item button a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+
+    .nav-bar {
+        position: relative;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .open {
+        display: block;
+    }
+    
+    #footer{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
