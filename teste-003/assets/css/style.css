@@ -100,7 +100,7 @@ header{
     justify-content: center;
     background-color: var(--cor02);
     padding: 10px;
-    grid-column: span 2; /* Ocupa as duas colunas */
+    grid-column: span 2;
 }
 
 .center {
