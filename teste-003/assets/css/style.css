@@ -80,9 +80,36 @@ header{
     display: none;
 }
 
-main{
-    height: 80vh;
+.flex-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
 }
+
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor02);
+    padding: 10px;
+}
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor02);
+    padding: 10px;
+    grid-column: span 2; /* Ocupa as duas colunas */
+}
+
+.center {
+    background-color: var(--cor03);
+    width: 100%;
+    height: 35vw;
+    border-radius: 4px;
+}
+
 
 footer{
     width: 100%;
