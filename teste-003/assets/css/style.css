@@ -83,7 +83,7 @@ header{
 .search{
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     background-color: var(--cor01);
     padding: 1rem;
 }
