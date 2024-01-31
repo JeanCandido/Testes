@@ -83,9 +83,9 @@ header{
 .search{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 90vw;
     background-color: var(--cor01);
-    padding: 1rem;
+    padding: 5vw;
 }
 
 .input-search{
