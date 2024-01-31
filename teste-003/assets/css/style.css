@@ -80,7 +80,26 @@ header{
     display: none;
 }
 
-.flex-grid {
+.search{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--cor01);
+    padding: 1rem;
+}
+
+.input-search{
+    color: white;
+    background-color: var(--cor02);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.input-search input{
+    all: unset;
+}
+
+.grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
@@ -288,6 +307,11 @@ footer{
 
     .open {
         display: block;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
     }
     
     #footer{
