@@ -99,6 +99,10 @@ header{
     all: unset;
 }
 
+.input-search input::-webkit-search-cancel-button{
+    display: none;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
