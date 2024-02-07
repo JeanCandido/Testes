@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        *{
+            background-color: #4f4f4f;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        summary{
+            all: unset;
+            width: 94%;
+            padding: 3%;
+            color: white;
+            font-size: x-large;
+            cursor: pointer;
+        }
+        details{
+            background-color: #3f3f3f;
+            color: white;
+        }
+        details + details{
+            margin-top: 0.5rem;
+        }
+        ul{
+            background-color: #2f2f2f;
+            padding: 4%;
+        }
+        li{
+            all: unset;
+            display: flex;
+            flex-direction: column;
+        }
+        li + li{
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>Stage 1</summary>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+    </details>
+    <details>
+        <summary>Stage 2</summary>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+    </details>
+</body>
+</html>
