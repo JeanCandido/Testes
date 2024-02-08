@@ -38,6 +38,68 @@
         li + li{
             margin-top: 0.5rem;
         }
+
+        .sem-wather{
+            position: relative;
+            display: flex;
+            padding: 1rem;
+            margin-top: 3rem;
+            background-color: #2f2f2f;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+            height: 7rem;
+        }
+
+        .line {
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 50%; /* Posiciona a linha no meio verticalmente */
+            height: 2px; /* Altura da linha */
+            width: 56vw;
+            background-color: #4f4f4f; /* Cor da linha */
+        }
+
+        .day-wather{
+            background-color: rgb(37, 169, 169);
+            border-radius: .9vw;
+            width: 1.8vw;
+            animation: up 2s;
+            z-index: 9999;
+        }
+        
+        #day-1{
+            height: 3rem;
+        }
+        #day-2{
+            height: 1rem;
+        }
+        #day-3{
+            height: 2rem;
+        }
+        #day-4{
+            height: 7rem;
+        }
+        #day-5{
+            height: 5rem;
+        }
+        #day-6{
+            height: 6rem;
+        }
+        #day-7{
+            height: 4rem;
+        }
+
+        .day-wather  + .day-wather{
+            margin-left: 6vw;
+        }
+
+        @keyframes up{
+            0%{
+                height: 3.6rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -57,5 +119,15 @@
             <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
         </ul>
     </details>
+    <div class="sem-wather">
+        <div class="day-wather" id="day-1"></div>
+        <div class="day-wather" id="day-2"></div>
+        <div class="day-wather" id="day-3"></div>
+        <div class="day-wather" id="day-4"></div>
+        <div class="day-wather" id="day-5"></div>
+        <div class="day-wather" id="day-6"></div>
+        <div class="day-wather" id="day-7"></div>
+        <div class="line"></div>
+    </div>
 </body>
 </html>
