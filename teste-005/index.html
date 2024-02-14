@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando grid</title>
+    <style>
+        html , body{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container{
+            background: black;
+            height: 100vh;
+            width: 100vw;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            /*
+
+            O self é o mesmo que o items porem aplicado direto o item
+
+            */
+
+            /*
+            Explicação do items
+            
+            justify-items: center;
+            align-items: center;
+
+            height: 50%;
+            width: 50%;
+            
+            */
+
+
+            /*
+            Explicação do content
+            
+            grid-template-columns: 10px 10px 10px;
+            grid-template-rows: 10px 10px 10px;
+
+            justify-content: space-between;
+            align-content: space-between;
+            
+            */
+
+            grid-gap: 5px;
+        }
+
+        .container > div{
+            background: #7159c1;
+
+            height: 50%;
+            width: 50%;
+        }
+
+        .center{
+            justify-self: center;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="center"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="center"></div>
+        <div class="center"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
