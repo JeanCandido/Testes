@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider de Imagens</title>
+<style>
+    .slide-container {
+        position: relative;
+        width: 80%; /* Ajuste conforme necessário */
+        max-width: 600px; /* Ajuste conforme necessário */
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 1s ease; /* Ajuste a duração da transição conforme necessário */
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 16px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-weight: bold;
+        z-index: 1;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="slide-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="https://cmiengenharia.com.br/imagens/informacoes/aluguel-elevador-cremalheira-01.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="https://cmiengenharia.com.br/imagens/informacoes/aluguel-elevadores-construcao-civil-01.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="https://cmiengenharia.com.br/imagens/informacoes/elevador-cremalheira-01.jpg" alt="Slide 3">
+        </div>
+        <!-- Adicione mais slides conforme necessário -->
+    </div>
+    <div class="prev" onclick="moveSlide(-1)">❮</div>
+    <div class="next" onclick="moveSlide(1)">❯</div>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 4000); // Altere 4000 para o tempo desejado em milissegundos (por exemplo, 5000 para 5 segundos)
+    }
+
+    function moveSlide(n) {
+        showSlides(slideIndex += n);
+    }
+</script>
+
+</body>
+</html>
