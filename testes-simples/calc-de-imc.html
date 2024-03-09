@@ -8,6 +8,7 @@
         body{
             height: 100vh;
             width: 100vw;
+            box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -44,9 +45,15 @@
         function calcular() {
             var alt = altura.value
             var pe = peso.value
+            var imc = pe / (alt * alt)
             
-
-            resultado.textContent = 'Seu IMC é:' + pe / (alt * alt)
+            if (imc <= 18.4) {
+                resultado.textContent = 'Abaixo do peso'
+            }else if( imc >= 25){
+                resultado.textContent = 'Obeso'
+            }else{
+                resultado.textContent = 'Saudavel'
+            }
         }
     </script>
 </body>
