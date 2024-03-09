@@ -47,12 +47,18 @@
             var pe = peso.value
             var imc = pe / (alt * alt)
             
-            if (imc <= 18.4) {
-                resultado.textContent = 'Abaixo do peso'
-            }else if( imc >= 25){
-                resultado.textContent = 'Obeso'
-            }else{
-                resultado.textContent = 'Saudavel'
+            if (imc < 18.5) {
+                resultado.textContent = 'Seu IMC é: Abaixo do peso';
+            } else if (imc < 25) {
+                resultado.textContent = 'Seu IMC é: Saudável';
+            } else if (imc < 30) {
+                resultado.textContent = 'Seu IMC é: Obeso';
+            } else if (imc < 35) {
+                resultado.textContent = 'Seu IMC é: Obesidade Grau I';
+            } else if (imc < 40) {
+                resultado.textContent = 'Seu IMC é: Obesidade Grau II';
+            } else {
+                resultado.textContent = 'Seu IMC é: Obesidade Grau III';
             }
         }
     </script>
