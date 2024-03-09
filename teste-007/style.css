@@ -49,10 +49,6 @@ button {
     grid-column: span 3;
 }
 
-#igual{
-
-}
-
 button:hover {
     background-color: #f0f0f0;
 }
