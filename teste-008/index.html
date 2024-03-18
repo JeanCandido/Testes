@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Contagem regressiva</h1>
+    <button class="botao">Iniciar/Parar</button>
+    <div class="tempo">
+        <span class="numero">3</span>
+    </div>
+    </div>
+    
+
+    <script>
+        const numeroEl = document.querySelector('.numero');
+
+        const botao = document.querySelector('.botao');
+
+        let numero = 3;
+
+        let intervalo;
+
+        botao.addEventListener('mousedown', () => {
+        intervalo = setInterval(() => {
+            numero--;
+
+            if (numero === 0) {
+            clearInterval(intervalo);
+            numero = 3;
+            }
+
+            numeroEl.textContent = numero;
+        }, 1000);
+        });
+
+        botao.addEventListener('mouseup', () => {
+        clearInterval(intervalo);
+        });
+
+    </script>
+
+</body>
+</html>
