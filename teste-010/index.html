@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <input type="number" placeholder="A" id="numA">
+    <input type="number" placeholder="B" id="numB">
+    <input type="number" placeholder="C" id="numC">
+    <input type="submit" value="Enviar" onclick="Calcular()">
+
+    <p id="resultado"></p>
+
+    <script>
+        const numa = document.getElementById("numA") 
+        const numb = document.getElementById("numB") 
+        const numc = document.getElementById("numC")
+        const result = document.getElementById("resultado")
+
+        function Calcular() {
+            let numA = Number(numa.value)
+            let numB = Number(numb.value)
+            let numC = Number(numc.value)
+
+            let Delta = numB * numB + 4 * numA * numC;
+
+            let x1 = (numB + Math.sqrt(Delta)) / 2 * numA
+            let x2 = (numB - Math.sqrt(Delta)) / 2 * numA
+
+            if(x2 == 0){
+                result.innerText = `x1=${x1} x2=não é real`
+            }else{
+                result.innerText = `x1=${x1} x2=${x2}`
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
