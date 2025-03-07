@@ -8,9 +8,30 @@
 <body>
     <p>digite um número:</p>
     <input type="number" id="num">
-    <p></p>
+    <p id="res"></p>
+    <button onclick="Tab()">resultado</button>
     <script>
         
+        function Tab (){
+            var num = document.getElementById("num")
+            var n = Number(num.value)
+            var res = document.getElementById("res");
+
+            res.innerHTML = ""
+            if(isNaN(n) || n === 0){
+                res.innerHTML = "Digite um valor valido"
+                return
+            }
+            for (let i = 1; i <= 5000; i++){
+                res.innerHTML += `${n} x ${i} = ${n * i} <br>`
+            }
+        }
+        
+        document.getElementById("num").addEventListener("keydown", function(event) {
+            if (event.key === "Enter"){
+                Tab()
+            }
+        })
     </script>
 </body>
 </html>
